@@ -35,5 +35,5 @@ class Backend:
 
     def getPackageFiles(self, pkg_name):
         if self.installdb.has_package(pkg_name):
-            return map(lambda x:'/'+x.path, pisi.api.info('qt', True)[1].list)
+            return map(lambda x:'/'+x.path, pisi.api.info(pkg_name, True)[1].list)
 
